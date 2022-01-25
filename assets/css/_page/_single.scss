@@ -20,7 +20,12 @@
     color: $global-font-secondary-color;
 
     span {
+      margin-right: .75rem;
       display: inline-block;
+
+      i {
+        margin-right: .2rem;
+      }
     }
 
     [theme=dark] & {
@@ -30,7 +35,7 @@
     @include link(false, true);
 
     .author {
-      font-size: 1.05rem;
+      font-size: 1rem;
     }
   }
 
