@@ -41,7 +41,7 @@ code, pre, .highlight table, .highlight tr, .highlight td {
   font-family: var(--code-font-family);
   font-size: var(--code-font-size);
   line-height: 1.4em;
-  margin: .5rem 0;
+  margin: 1rem 0;
 
   .table-wrapper {
     > table,
@@ -156,6 +156,7 @@ code, pre, .highlight table, .highlight tr, .highlight td {
     }
 
     .table-wrapper {
+      margin: 0;
       max-height: 0;
       overflow-y: hidden;
       @include details-transition-open;
