@@ -58,27 +58,27 @@
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a>
                 {{- if .Site.IsMultiLingual -}}
-                <a href="javascript:void(0);" class="menu-item language" title="{{ T "selectLanguage" }}">
-                    <i class="fa fa-globe" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;">
-                        {{- if eq .Kind "404" -}}
-                            {{- /* https://github.com/dillonzq/LoveIt/issues/378 */ -}}
-                            {{- range .Sites -}}
-                                {{- $link := printf "%v/404.html" .LanguagePrefix -}}
-                                <option value="{{ $link }}"{{ if eq . $.Site }} selected{{ end }}>
-                                    {{- .Language.LanguageName -}}
-                                </option>
+                    <a href="javascript:void(0);" class="menu-item language" title="{{ T "selectLanguage" }}">
+                        <i class="fas fa-globe" aria-hidden="true"></i>                      
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;">
+                            {{- if eq .Kind "404" -}}
+                                {{- /* https://github.com/dillonzq/LoveIt/issues/378 */ -}}
+                                {{- range .Sites -}}
+                                    {{- $link := printf "%v/404.html" .LanguagePrefix -}}
+                                    <option value="{{ $link }}"{{ if eq . $.Site }} selected{{ end }}>
+                                        {{- .Language.LanguageName -}}
+                                    </option>
+                                {{- end -}}
+                            {{- else -}}
+                                {{- range .AllTranslations -}}
+                                    <option value="{{ .RelPermalink }}"{{ if eq .Lang $.Lang }} selected{{ end }}>
+                                        {{- .Language.LanguageName -}}
+                                    </option>
+                                {{- end -}}
                             {{- end -}}
-                        {{- else -}}
-                            {{- range .AllTranslations -}}
-                                <option value="{{ .RelPermalink }}"{{ if eq .Lang $.Lang }} selected{{ end }}>
-                                    {{- .Language.LanguageName -}}
-                                </option>
-                            {{- end -}}
-                        {{- end -}}
-                    </select>
-                </a>
-            {{- end -}}
+                        </select>
+                    </a>
+                {{- end -}}
             </div>
         </div>
     </div>
