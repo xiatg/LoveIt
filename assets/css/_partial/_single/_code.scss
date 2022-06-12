@@ -154,7 +154,7 @@ code, pre, .highlight table, .highlight tr, .highlight td {
     .table-wrapper {
       margin: 0;
       max-height: 0;
-      overflow-y: hidden;
+      overflow: auto;
       @include details-transition-open;
     }
 
@@ -168,7 +168,7 @@ code, pre, .highlight table, .highlight tr, .highlight td {
       }
 
       .table-wrapper {
-        max-height: 10000px;
+        max-height: 42em;
         @include details-transition-close;
       }
 
