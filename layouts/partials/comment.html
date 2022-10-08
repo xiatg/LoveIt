@@ -151,7 +151,7 @@
         {{- $twikoo := $comment.twikoo | default dict -}}
         {{- if $twikoo.enable -}}
             <div id="twikoo" class="comment"></div>
-            {{- $source := $cdn.twikooJS | default "lib/twikoo/twikoo.all.min.js" -}}
+            {{- $source := $cdn.twikooJS | default "lib/twikoo/twikoo.min.js" -}}
             {{- dict "Source" $source "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
             {{- $commentConfig = dict "envId" $twikoo.envId "el" "#twikoo" | dict "twikoo" | merge $commentConfig -}}
             <noscript>
