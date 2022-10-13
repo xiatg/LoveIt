@@ -408,7 +408,7 @@ var Theme = /*#__PURE__*/function () {
                   icon = _ref8.icon,
                   href = _ref8.href;
 
-              return "<div class=\"search-footer\">Search by <a href=\"".concat(href, "\" rel=\"noopener noreffer\" target=\"_blank\">").concat(icon, " ").concat(searchType, "</a></div>");
+              return "<div class=\"search-footer\">Search by <a href=\"".concat(href, "\" rel=\"noopener noreferrer\" target=\"_blank\">").concat(icon, " ").concat(searchType, "</a></div>");
             }
           }
         });
