@@ -320,10 +320,10 @@
     .person-mention.h-card {
       display: inline-block;
       img {
-        vertical-align: -12%;
-        max-height: 1.1em;
-        margin-right: 0ex;
-        border-radius: 50%;
+        height: 1.1em;
+        vertical-align: text-top;
+        margin-right: 0;
+        @include border-radius(50%);
       }
     }
   }
