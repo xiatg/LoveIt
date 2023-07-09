@@ -9,7 +9,9 @@ footer {
     font-size: .875rem;
 
     .footer-line {
-      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
 
       .icp-br {
         display: none;
