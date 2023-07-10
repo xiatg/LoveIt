@@ -1,3 +1,6 @@
+{{/*  calculate the website load time - start  */}}
+{{- .Scratch.Set "startTime" now -}}
+
 {{- .Scratch.Set "version" "0.2.11" -}}
 
 {{- $params := .Params | merge .Site.Params.page -}}

@@ -37,8 +37,9 @@
                     <div class="footer-line-right">
                         <a class="log" href="https://gohugo.io/">Log</a>
                         &nbsp;|&nbsp&nbsp;<i class="fas fa-gauge"></i>
-                        &nbsp;|&nbsp;<a class="cms" href="https://gohugo.io/"> Hugo</a>
-                        &nbsp;|&nbsp;<a class="loadtime"> 10ms</a>
+                        &nbsp;|&nbsp;<a class="cms" href="https://gohugo.io/">Hugo</a>
+                        {{- $startTime := .Scratch.Get "startTime" -}}
+                        &nbsp;|&nbsp;<span class="loadtime">{{- sub now.UnixMilli $startTime.UnixMilli -}}ms</span>
                     </div>
                 </div>
             {{- end -}}
