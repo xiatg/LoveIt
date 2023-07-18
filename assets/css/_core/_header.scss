@@ -25,6 +25,8 @@ header {
   &:hover {
     @include box-shadow(0 0 1.5rem 0 rgba(0, 0, 0, .1));
   }
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .25), 0 2px 8px rgba(0, 0, 0, .12)
 }
 
 .header-wrapper {
@@ -478,6 +480,6 @@ header {
 .banner {
   background: url(/images/kinkoi.jpg) center;
   background-size: cover;
-  padding: 100px 0 100px;
+  padding: 100px 0 180px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .25), 0 2px 8px rgba(0, 0, 0, .12)
 }
