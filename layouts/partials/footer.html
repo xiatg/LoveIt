@@ -30,8 +30,19 @@
                         {{- end -}}
     
                         {{- /* License */ -}}
-                        {{- with .Site.Params.footer.license -}}
+                        {{/*  {{- with .Site.Params.footer.license -}}
                             &nbsp;|&nbsp;<span class="license">{{ . | safeHTML }}</span>
+                        {{- end -}}  */}}
+
+                        {{- /* Uptime */ -}}
+                        {{- with .Site.Params.footer.since_uptime -}}
+                            {{- $from := time.AsTime . -}}
+                            {{- $duration := now.Sub $from -}}
+                            &nbsp;|&nbsp;{{- math.Floor (div $duration.Hours 8760) -}}年
+                            {{- div (mod $duration.Hours 8760) 24 -}}天
+                            {{- mod $duration.Hours 24 -}}時
+                            {{- mod $duration.Minutes 60 -}}分
+                            {{- mod $duration.Seconds 60 -}}秒
                         {{- end -}}
                     </div>
                     <div class="footer-line-right">
