@@ -478,8 +478,9 @@ header {
 }
 
 .banner {
-  background: url(/images/kinkoi.jpg) center;
+  background: url(/images/kinkoi.jpg);
+  background-position: 0px -70px;
   background-size: cover;
-  padding: 100px 0 180px;
+  padding: 100px 0 90px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .25), 0 2px 8px rgba(0, 0, 0, .12)
 }
