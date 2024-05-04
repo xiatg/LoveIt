@@ -35,14 +35,13 @@
                         {{- end -}}  */}}
 
                         {{- /* Uptime */ -}}
+                        &nbsp;|&nbsp;<span id="btime"></span>
                         {{- with .Site.Params.footer.since_uptime -}}
-                            {{- $from := time.AsTime . -}}
-                            {{- $duration := now.Sub $from -}}
-                            &nbsp;|&nbsp;{{- math.Floor (div $duration.Hours 8760) -}}年
-                            {{- div (mod $duration.Hours 8760) 24 -}}天
-                            {{- mod $duration.Hours 24 -}}時
-                            {{- mod $duration.Minutes 60 -}}分
-                            {{- mod $duration.Seconds 60 -}}秒
+                            <script language="javascript" type="text/javascript"  src="{{ "/js/time.js" | urlize | relURL }}"></script>
+                            <script> 
+                                update_btime({{ . }});
+                                setInterval(function() {update_btime({{ . }})}, 1000);
+                            </script>
                         {{- end -}}
                     </div>
                     <div class="footer-line-right">
